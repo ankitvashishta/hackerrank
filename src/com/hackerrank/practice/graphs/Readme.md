@@ -14,5 +14,58 @@
 Vertices are stored as records or objects, and every vertex stores a list of adjacent vertices. This data structure allows the storage of additional data on the vertices. Additional data can be stored if edges are also stored as objects, in which case each vertex stores its incident edges and each edge stores its incident vertices.</br>
 A potential disadvantage of the adjacency-list representation is that it provides no quicker way to determine whether a given edge (u, v) is present in the graph than to search for v in the adjacency list Adj(u). An adjacency-matrix representation of the graph remedies this disadvantage, but at the cost of using asymptotically more memory.</p>
  <p><b>Adjacency Matrix</b> : A two-dimensional matrix, in which the rows represent source vertices and columns represent destination vertices. Data on edges and vertices must be stored externally. Only the cost for one edge can be stored between each pair of vertices.</p>
- 
+ <style>
+ table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+td {
+  text-align: center;
+}
+th {
+  background-color: gray;
+}
+</style>
+<table style="width:100%"> 
+<tr>
+<th>Operation</th>
+<th>Adjacency List</th>
+<th>Adjacency Matrix</th>
+</tr>
+<tr>
+<td>Store Graph</td>
+<td>O(|V| + |E|)</td>
+<td>O(|V|<sup>2</sup>)</td>
+</tr>
+<tr>
+<td>Add Vertex</td>
+<td>O(1)</td>
+<td>O(|V|<sup>2</sup>)</td>
+</tr>
+<tr>
+<td>Add Edge</td>
+<td>O(1)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>Remove Vertex</td>
+<td>O(|E|)</td>
+<td>O(|V|<sup>2</sup>)</td>
+</tr>
+<tr>
+<td>Remove Vertex</td>
+<td>O(|V|)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>Check if vertices x & y are adjacent</td>
+<td>O(|V|)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
 
+</table>

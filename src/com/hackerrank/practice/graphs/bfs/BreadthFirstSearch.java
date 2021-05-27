@@ -9,13 +9,21 @@ import java.util.Queue;
 
 public class BreadthFirstSearch {
 
+	/**
+	 * 
+	 * @param n     - number of vertices.
+	 * @param m     - number of edges.
+	 * @param edges - 2d array depicting edges between two vertices.
+	 * @param s     - starting node.
+	 * @return - array of distance of every vertex from source.
+	 */
 	public int[] bfs(int n, int m, int[][] edges, int s) {
 		int[][] adjacencyMatrix = new int[n][n];
 		for (int[] edge : edges) {
 			adjacencyMatrix[edge[0] - 1][edge[1] - 1] = 1;
 			adjacencyMatrix[edge[1] - 1][edge[0] - 1] = 1;
 		}
-		return new BreadthFirstSearch().breadthFirstSearch(adjacencyMatrix, n, s - 1);
+		return breadthFirstSearch(adjacencyMatrix, n, s - 1);
 
 	}
 
@@ -56,6 +64,12 @@ public class BreadthFirstSearch {
 		return distancesArray;
 	}
 
+	/**
+	 * 
+	 * @param vertices - the vertices in the graph.
+	 * @param s - starting/source node.
+	 * @return - map 
+	 */
 	public Map<Integer, Vertex> initializeSingleSource(int[] vertices, int s) {
 		Map<Integer, Vertex> vertexMap = new HashMap<Integer, Vertex>();
 		List<Integer> verticesList = new ArrayList<>();
