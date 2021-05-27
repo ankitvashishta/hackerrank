@@ -106,13 +106,9 @@ public class Dijkstra {
 		scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
 		for (int tItr = 0; tItr < t; tItr++) {
-
 			String[] nm = scanner.nextLine().split(" ");
-
 			int n = Integer.parseInt(nm[0]);
-
 			int m = Integer.parseInt(nm[1]);
-
 			int[][] edges = new int[m][3];
 
 			for (int i = 0; i < m; i++) {
@@ -124,7 +120,6 @@ public class Dijkstra {
 					edges[i][j] = edgesItem;
 				}
 			}
-
 			int s = scanner.nextInt();
 			//scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
@@ -138,12 +133,9 @@ public class Dijkstra {
 						System.out.print(" ");
 					}
 				}
-
 			}
-
 			System.out.println();
 		}
-
 		scanner.close();
 	}
 
